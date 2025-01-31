@@ -52,7 +52,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 function productItem(product) {
   return `
     <li class="product--item">
-      <img class="product--image" src="${product.image}"  onerror="handleImageError(event);"  />
+      <img class="product--image" src="${product.image}" />
       <div class="product--item-text">
         <a class="product--link" href="${product.link}" target="_blank">
           <span>${product.product}</span>
