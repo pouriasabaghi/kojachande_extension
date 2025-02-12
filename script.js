@@ -6,7 +6,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     const fetchData = async () => {
       try {
         main.innerHTML = loading();
-        const response = await fetch("http://localhost:8000/api/v1/prices", {
+        const response = await fetch("https://api.kojachande.ir/api/v1/prices", {
           method: "POST",
           headers: {
             Accept: "application/json",
@@ -74,5 +74,5 @@ function loading(status = true) {
 }
 
 function handleImageError(event) {
-  event.target.src = "./logo.svg";
+  event.target.src = "./logo.png";
 }

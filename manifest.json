@@ -1,27 +1,27 @@
 {
   "manifest_version": 3,
-  "name": "KojaChande",
-  "version": "1.1",
-  "description": "Find better price in torob.",
-  "permissions": ["activeTab", "scripting", "storage", "tabs"],
+  "name": "Koja Chande",
+  "version": "1.3",
+  "description": "بهترین قیمت رو پیدا کن",
+  "permissions": ["activeTab", "scripting"],
   "background": {
     "service_worker": "background.js"
   },
-  "host_permissions": ["https://*/*", "http://*/*"],
+  "host_permissions": [
+    "https://www.digikala.com/*",
+    "https://www.amazon.com/*"
+  ],
   "action": {
     "default_popup": "index.html"
   },
   "icons": {
-    "16": "icon-16px.png",
-    "48": "icon-48px.png",
-    "128": "icon-128px.png"
+    "16": "128x128.png",
+    "48": "128x128.png",
+    "128": "128x128.png"
   },
   "content_scripts": [
     {
-      "matches": [
-        "https://www.digikala.com/product/*",
-        "https://www.amazon.com/*"
-      ],
+      "matches": ["https://www.digikala.com/*", "https://www.amazon.com/*"],
       "js": ["content.js"]
     }
   ]
