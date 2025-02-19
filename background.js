@@ -4,7 +4,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
       try {
         await chrome.action.openPopup();
       } catch (error) {
-        console.log("Popup is already open");
+        console.error(error,"Popup is already open");
       }
 
       chrome.runtime.sendMessage({
