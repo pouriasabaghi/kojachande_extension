@@ -6,7 +6,6 @@
 const openPopup = async (product) => {
   try {
     await chrome.action.openPopup();
-    sendS;
   } catch (error) {
     console.error(error, "Popup is already open");
   }
